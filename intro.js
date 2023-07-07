@@ -6,3 +6,4 @@ var user = {
 console.log("Cherry");
 console.log(user);
 console.log(user.age);
+// console.log(user.email);
