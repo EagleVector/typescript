@@ -8,28 +8,14 @@ Typescript is a development tool which is a wrapper around javascript just to ma
 
 `ts` fies are converted(transpiled) into `js` and then executed.
 
-## Types in typescript
+## Installation
 
-Numbers
-String
-Boolean
-Array
-Tuples
-`ANY` -> Not to be Used
-Never
-Unknown
+TS Global installation
+`npm install -g typescript`
 
-## Situations 
+local
+`npm install typescript --save-dev` as a developer dependency
 
-Typechecking in the first place to minimize error and max optimization
-1. Function to add 2 numbers.
-2. Function which should Return a string.
+`tsc filename.js`
 
-We dont have to write an extra check to validate the input and output
-
-## Syntax
-
-### always use a lower case
-
-Declaring a variable
-`let variableName: type = value`
+`node filename.js`
