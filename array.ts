@@ -36,12 +36,50 @@ const nwusr: tUser = [112, "hello"];
 nwusr[1] = "gh.vom";
 // values can change
 
+interface UserI {
+  readonly dbId: number,
+  email: string,
+  userId: number,
+  googleId?: string,
+  startTrial(): string,
+  getCoupon(couponName: string, value: number): number
+}
 
+// Reopening of the interface
 
+interface UserI {
+  githubToken: string
+}
 
+const chrr: UserI = {dbId: 3, 
+  email: "chrr@gmail.com", 
+  userId: 1234,
+  githubToken: "hgfdsadtyu76534567",
+startTrial: () => {
+  return "hey";
+},
+getCoupon: (name: "cherry25", off: 25) => {
+  return 25;
+}};
 
+// Interference of the interface
 
+interface Admn extends UserI {
+  role: "admin" | "ta" | "learner"
+}
 
+const htsh: Admn = { dbId: 3, 
+  email: "chrr@gmail.com", 
+  userId: 1234,
+  role: "admin",
+  githubToken: "hgfdsadtyu76534567",
+startTrial: () => {
+  return "hey";
+},
+getCoupon: (name: "cherry25", off: 25) => {
+  return 25;
+}
+};
 
 // Temporary fix
 
