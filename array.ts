@@ -23,6 +23,24 @@ console.log(seatAllotment);
 
 // Tuples in typescript: Not available in JS
 
+// const users: (string | number)[] = [1, "hc"];
+const users: [string, number, boolean] = ["kiya", 1, true];
+// Restriction on the order of array really matters inside a tuple
+
+let rgb: [number, number, number] = [255, 168, 432];
+
+type tUser = [number, string];
+
+const nwusr: tUser = [112, "hello"];
+
+nwusr[1] = "gh.vom";
+// values can change
+
+
+
+
+
+
 
 
 // Temporary fix
